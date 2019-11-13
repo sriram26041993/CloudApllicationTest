@@ -1,0 +1,17 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+	<test name="School-appChrome">
+		<parameter name="browser" value="chrome" />
+		<classes>
+
+			<class name="TestCases.endtoend" />
+
+		</classes>
+	</test>
+</suite>
+
+
+
+
+<!-- Shift + Ctrl + / to Add Block Comment in both XML -->
