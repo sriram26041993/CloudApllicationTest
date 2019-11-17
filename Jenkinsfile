@@ -1,16 +1,13 @@
-pipeline {
-    agent any 
-
-    stages {
-        stage('Build Assets') {
-            steps {
-                echo 'Building Assets...'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing stuff...'
-            }
-        }
-    }
+node {
+	stage ('SCM checkout'){
+		git "https://github.com/sriram26041993/CloudApllicationTest"
+		}
+	stage ('Build'){
+    	dir("comtest") {
+	   sh "mvn clean install"
+       }
+       	dir("comtest/target") {
+	   sh "java -jar com.test-1.0-SNAPSHOT.jar"
+       }
+		}
 }
