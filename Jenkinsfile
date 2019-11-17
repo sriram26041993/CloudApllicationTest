@@ -3,6 +3,6 @@ node {
 		git "https://github.com/sriram26041993/CloudApllicationTest"
 		}
 	stage ('Build'){
-		sh "mvn clean install"
+		bat (/mvn clean install/)
        }
 }
