@@ -45,7 +45,7 @@ public class endtoend {
 		SignInPage signin = new SignInPage(driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		Thread.sleep(2000);
-// 		signin.registerlinkclick();
+ 		signin.registerlinkclick();
 		Thread.sleep(2000);
 		signin.entervaluesRegister();
 		Thread.sleep(2000);
